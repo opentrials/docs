@@ -11,7 +11,7 @@ Work towards specifying a data model for the Open Trials project.
 ### Entities
 
 - `Trial` - the main entity, clinical study (16k)
-- `Source` - source of data, e.g. "Cochrane" (1)
+- `Source` - source of data, e.g. "clinicaltrials.gov" (1)
 - `Condition` - illness, injury, impairment etc (256)
 - `Method` - trial type, methodology (45)
 - `Drug` - a chemical substance to heal people (0)
