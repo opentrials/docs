@@ -1,0 +1,131 @@
+{
+    "primaryKey": "primary_id",
+    "fields": [
+        {
+            "name": "primary_id",
+            "title": "Primary Registry and Trial Identifying Number",
+            "description": "Name of Primary Registry, and the unique ID number assigned by the Primary Registry to this trial.",
+            "type": "string"
+        },
+        {
+            "name": "registration_date",
+            "title": "Date of Registration in Primary Registry",
+            "description": "Date when trial was officially registered in the Primary Registry.",
+            "type": "date"
+        },
+        {
+            "name": "secondary_ids",
+            "title": "Secondary Identifying Numbers",
+            "description": "Other identifiers besides the Trial Identifying Number allocated by the Primary Registry, if any.",
+            "type": "array"
+        },
+        {
+            "name": "secondary_ids",
+            "title": "Secondary Identifying Numbers",
+            "description": "Other identifiers besides the Trial Identifying Number allocated by the Primary Registry, if any.",
+            "type": "array"
+        },
+        {
+            "name": "source_of_funding",
+            "title": "Source(s) of Monetary or Material Support",
+            "description": "Major source(s) of monetary or material support for the trial (e.g. funding agency, foundation, company, institution).",
+            "type": "string"
+        },
+        {
+            "name": "primary_sponsor",
+            "title": "Primary Sponsor",
+            "description": "The individual, organization, group or other legal entity which takes responsibility for initiating, managing and/or financing a study. The Primary Sponsor is responsible for ensuring that the trial is properly registered. The Primary Sponsor may or may not be the main funder.",
+            "type": "string"
+        },
+        {
+            "name": "secondary_sponsors",
+            "title": "Secondary Sponsors",
+            "description": "Additional individuals, organizations or other legal persons, if any, that have agreed with the primary sponsor to take on responsibilities of sponsorship.",
+            "type": "array"
+        },
+        {
+            "name": "public_contact",
+            "title": "Contact for Public Queries",
+            "description": "Email address, telephone number and postal address of the contact who will respond to general queries, including information about current recruitment status.",
+            "type": "object"
+        },
+        {
+            "name": "scientific_contact",
+            "title": "Contact for Scientific Queries",
+            "description": "There must be clearly assigned responsibility for scientific leadership to a named Principal Investigator. The PI may delegate responsibility for dealing with scientific enquiries to a scientific contact for the trial. This scientific contact will be listed in addition to the PI.",
+            "type": "object"
+        },
+        {
+            "name": "public_title",
+            "title": "Public Title",
+            "description": "Title intended for the lay public in easily understood language.",
+            "type": "string"
+        },
+        {
+            "name": "scientific_title",
+            "title": "Scientific Title",
+            "description": "Scientific title of the study as it appears in the protocol submitted for funding and ethical review. Include trial acronym if available.",
+            "type": "string"
+        },
+        {
+            "name": "countries",
+            "title": "Countries of Recruitment",
+            "description": "The countries from which participants will be, are intended to be, or have been recruited at the time of registration.",
+            "type": "array"
+        },
+        {
+            "name": "conditions",
+            "title": "Health Condition(s) or Problem(s) Studied",
+            "description": "Primary health condition(s) or problem(s) studied (e.g., depression, breast cancer, medication error).",
+            "type": "array"
+        },
+        {
+            "name": "interventions",
+            "title": "Intervention(s)",
+            "description": "For each arm of the trial record a brief intervention name plus an intervention description.",
+            "type": "array"
+        },
+        {
+            "name": "eligibility_criteria",
+            "title": "Key Inclusion and Exclusion Criteria",
+            "description": "Inclusion and exclusion criteria for participant selection, including age and sex. Other selection criteria may relate to clinical diagnosis and co-morbid conditions; exclusion criteria are often used to ensure patient safety.",
+            "type": "string"
+        },
+        {
+            "name": "study_type",
+            "title": "Study Type",
+            "description": "Type of study (interventional or observational), study design and phase (if applicable).",
+            "type": "object"
+        },
+        {
+            "name": "enrollment_date",
+            "title": "Date of First Enrollment",
+            "description": "Anticipated or actual date of enrolment of the first participant.",
+            "type": "date"
+        },
+        {
+            "name": "sample_size",
+            "title": "Target Sample Size",
+            "description": "Number of participants that this trial plans to enrol in total.",
+            "type": "integer"
+        },
+        {
+            "name": "recruitment_status",
+            "title": "Recruitment status of this trial",
+            "description": "Recruitment status of this trial: Pending, Recruiting, Suspended, Complete, Other",
+            "type": "string"
+        },
+        {
+            "name": "primary_outcomes",
+            "title": "Primary Outcome(s)",
+            "description": "Outcomes are events, variables, or experiences that are measured because it is believed that they may be influenced by the intervention.",
+            "type": "array"
+        },
+        {
+            "name": "secondary_outcomes",
+            "title": "Key Secondary Outcomes",
+            "description": "Secondary outcomes are outcomes which are of secondary interest or that are measured at timepoints of secondary interest. A secondary outcome may involve the same event, variable, or experience as the primary outcome, but measured at timepoints other than those of primary interest.",
+            "type": "array"
+        }
+    ]
+}
