@@ -20,12 +20,6 @@
             "type": "array"
         },
         {
-            "name": "secondary_ids",
-            "title": "Secondary Identifying Numbers",
-            "description": "Other identifiers besides the Trial Identifying Number allocated by the Primary Registry, if any.",
-            "type": "array"
-        },
-        {
             "name": "source_of_funding",
             "title": "Source(s) of Monetary or Material Support",
             "description": "Major source(s) of monetary or material support for the trial (e.g. funding agency, foundation, company, institution).",
