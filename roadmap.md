@@ -1,6 +1,6 @@
 # OpenTrials Technical Roadmap
 
-Hello fans of evidence-based medicine and open data! We'd like to officially announce that the technical work for OpenTrials is underway. Read on for an overview of what we are doing, how we are doing it, and the current roadmap for the first half of 2016. If you have any quesftions or comments, do not hesitate to ask on Twitter via [@opentrials](https://twitter.com/opentrials) or by email at [opentrials@okfn.org](mailto:opentrials@okfn.org).
+Hello fans of evidence-based medicine and open data! We'd like to officially announce that the technical work for OpenTrials is underway. Read on for an overview of what we are doing, how we are doing it, and the current roadmap for the first half of 2016. If you have any questions or comments, do not hesitate to ask on Twitter via [@opentrials](https://twitter.com/opentrials) or by email at [opentrials@okfn.org](mailto:opentrials@okfn.org).
 
 ## Technical team
 
