@@ -1,6 +1,6 @@
 # OpenTrials Technical Roadmap
 
-Hello fans of evidence-based medicine and open data! We'd like to officially announce that the technical work for OpenTrials is underway. Read on for an overview of what we are doing, how we are doing it, and the current roadmap for the first half of 2016. If you have any questions or comments, do not hesitate to ask on Twitter via [@opentrials](https://twitter.com/opentrials) or by email at [opentrials@okfn.org](mailto:opentrials@okfn.org).
+Hello fans of evidence-based medicine and open data! We'd like to officially announce that the technical work for OpenTrials is underway. Read on for an overview of what we are doing, how we are doing it, and the current roadmap for the first half of 2016. If you have any quesftions or comments, do not hesitate to ask on Twitter via [@opentrials](https://twitter.com/opentrials) or by email at [opentrials@okfn.org](mailto:opentrials@okfn.org).
 
 ## Technical team
 
@@ -56,7 +56,7 @@ We use several terms in the roadmap to describe the various components of the Op
 -   **API**: The HTTP API for for data stored in the Database.
 -   **Apps**: The publicly accessible applications exposing views on the data stored in the OpenTrials database. Currently, we aim to develop 3 apps:
     -   **OpenTrials**: The main portal for discovery and exploration of clinical trial data.
-    -   **Find a Trial**: An app to assist patients and health carers in finding relevant clinical trials.
+    -   **Trial Finder**: An app to assist patients and health carers in finding relevant clinical trials.
     -   **Schizophrenia**: An app that uses the OpenTrials API to deep dive into clinical trial data around Schizophrenia.
 
 ## Roadmap
@@ -90,7 +90,7 @@ Contact [opentrials@okfn.org](mailto:opentrials@okfn.org) if you have a particul
 -   Diff implementation over clinical trial records, exposing record discrepancies as published on public registers, accessible as data via API and App.
 -   Iteration on the OpenTrials Database and API as we integrate new data sources and record matching strategies.
 -   Iteration on the OpenTrials App prototype, towards a beta version that exposes all data available from the OpenTrials API.
--   High-level requirements and UI/X skeletons for the Find a Trial App.
+-   High-level requirements and UI/X skeletons for the Trial Finder App.
 -   High-level requirements and UI/X skeletons for the Schizophrenia App.
     High-level requirements and UI/X skeletons for de-duplication and record matching via crowdsourcing in the OpenTrials App.
 -   Outline a range of potential problem sets and ideas for data apps that could be build on the OpenTrials API, for use in a hackathon.
@@ -112,7 +112,7 @@ Contact [opentrials@okfn.org](mailto:opentrials@okfn.org) if you have a particul
 -   Continued iteration on data acquisition, record matching, and data modeling -> APIs.
 -   User identity management for APIs and Apps.
 -   Prototype implementation of user interface for de-duplication and reconciliation.
--   Prototype implementation of Find a Trial App.
+-   Prototype implementation of Trial Finder App.
 -   Prototype implementation of Schizophrenia App.
 -   Possible data acquisition targeted for use in the Schizophrenia App.
     
@@ -120,7 +120,7 @@ Contact [opentrials@okfn.org](mailto:opentrials@okfn.org) if you have a particul
 
 ####  Outcomes
 
--   Prototype versions of Find a Trial and Schizophrenia apps for testing.
+-   Prototype versions of Trial Finder and Schizophrenia apps for testing.
 -   User accounts, which in turn will enable user-specific actions like saving searches.
 
 ### Onwards
