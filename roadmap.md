@@ -61,7 +61,7 @@ For databases, OpenTrials will use [Elasticsearch](https://www.elastic.co/produc
 
 We are working towards a number of 3rd party integrations for OpenTrials, and we expect these type of integrations to increase over 2016. Some of the first integrations include:
 
-* **Document Cloud**: OCR and text editing for scanned documents already in OpenTrials
+* **Document Cloud** ([link](https://www.documentcloud.org/)): OCR and text editing for scanned documents already in OpenTrials
 * **ContentMine** ([link](http://contentmine.org/)): Matching academic journal publications to clinical trials
 * **Epistemonikos** ([link](http://www.epistemonikos.org)): Summaries and systematic reviews on clinical trials 
 
