@@ -6,44 +6,64 @@ Hello fans of evidence-based medicine and open data! We'd like to officially ann
 
 Technical work on OpenTrials is conducted by Open Knowledge International. While different people may come into the project at different times, the current technical team is:
 
--   Sam Smith ([@smth](http://github.com/smth)): User Experience and Design
--   Evgeny Karev ([@roll](http://github.com/roll)): Development
--   Vitor Baptista ([@vitorbaptista](http://github.com/vitorbaptista)): Development
+-   Sam Smith ([@smth](http://github.com/smth)): UI/X Designer
+-   Evgeny Karev ([@roll](http://github.com/roll)): Developer
+-   Vitor Baptista ([@vitorbaptista](http://github.com/vitorbaptista)): Developer
 -   Paul Walsh ([@pwalsh](http://github.com/pwalsh)): Technical Lead
 
-Feel free to reach out to any of us via the [OpenTrials organization on GitHub](https://github.com/opentrials).
+Feel free to reach out to any of us at [OpenTrials on GitHub](https://github.com/opentrials).
 
 ## Contributing
 
-As with all Open Knowledge International projects, we welcome and encourage contribution. For the technical work on OpenTrials, contributions can mean any or all of code, documentation, bug testing, etc. See our [organization](https://github.com/opentrials) on GitHub, and browse the [unified issue tracker](https://github.com/issues?utf8=✓&q=is%3Aopen+is%3Aissue+user%3Aopentrials+) for all the repositories for interesting tasks to take up.
+As with all Open Knowledge International projects, we welcome and encourage contribution. For the technical work on OpenTrials, contributions can mean any or all of code, documentation, testing, etc. See [OpenTrials on GitHub](https://github.com/opentrials), and browse the [unified issue tracker](https://github.com/issues?utf8=✓&q=is%3Aopen+is%3Aissue+user%3Aopentrials) for all the repositories for interesting tasks to take up.
 
 ## Overview
 
-OpenTrials will aggregate information from a wide variety of existing sources, and aims to provide a comprehensive picture of the data and documents on all trials conducted on medicines and other treatments around the world. See the [video](https://www.youtube.com/watch?v=ngVYptGuK0E) for greater context. Here, we are are focused on building the platform.
+OpenTrials aims to provide a comprehensive picture of the data and documents on all clinical trials conducted on medicines and other treatments. The platform will present data aggregated from a wide variety of existing sources, starting with clinical trial registers and moving on to academic journals, systematic reviews and other data sources. See Ben Goldacre's [video](https://www.youtube.com/watch?v=ngVYptGuK0E) for greater context. Here, we are are focused on the technical aspects of the OpenTrials platform.
 
 ### Architecture
 
-Let's start with a look at the general architecture of the OpenTrials platform.
+Let's start with a look at the general architecture of the OpenTrials platform. This is a high-level overview, describing the general data flow, and the relation between different components.
 
-<img src="images/architecture.png" width="600" title="OpenTrials Architecture Overview">
+<img src="images/architecture.png" width="600" style="text-align: center; display: block; margin: 0 auto;" title="OpenTrials Architecture Overview">
 
 OpenTrials will be implemented as a set of loosely coupled components, from data acquisition through to user-facing applications:
 
--   Extractors and transformers get data from 3rd party sources and process it in our data warehouse, performing tasks from general cleanup through to record matching.
--   Processed data is written to both a file system and a database. The file system hold documents associated with records in the database, as well as flat file representations of data for direct access. The database is normalized SQL representation of the data warehouse plus a search index, each powering an HTTP API.
--   A set of user-facing applications sit on top of the API to provide views on the data.
+- Extractors and transformers get data from 3rd party sources and process it in our data warehouse, performing tasks from general cleanup through to record matching.
+- Processed data is written to both a file system and a database. The file system hold documents associated with records in the database, as well as flat file representations of data for direct access. The database is a normalized SQL representation of the data warehouse, plus a search index, each powering an HTTP API.
+- A set of user-facing applications sit on top of the API to provide views on the data.
+
+Of course, there are many details inside each component as described in the above architecture diagram. We plan to blog regularly as we develop the platform, and give deeper insight into each component and our strategies.
 
 ### Data model
 
-It is important to note that we are not setting out to design a perfectly formed vocabulary around trial data. The data itself is messy, inconsistent, divergent and non-standard. However, we do strive to establish a workable understanding of relations between various entities around clinical trial data.
+It is important to note that we are not setting out to design a perfectly formed vocabulary around trial data. When we talk about linking trial data, we do not mean that source data will be required to conform to any pre-conceived notion of what that data *should* look like. Rather, we accept that the data itself is messy, inconsistent, divergent and non-standard, and we set out to increase the value of this data by *threading* it together based on a range of matching techniques, and by extracting a set of relations between various entities that are manifest in the data itself.
 
-<img src="images/model.png" width="600" title="OpenTrials Data Model Overview">
+<img src="images/model.png" width="600" style="text-align: center; display: block; margin: 0 auto;" title="OpenTrials Data Model Overview">
 
-The diagram centers around our "ideal" representation of a trial, which is derived from the trial records published on public and private registers.
+The above diagram centers around our "ideal" representation of a trial, which is derived from various sources of data on a trial, starting with the trial records published on clinical trial registers. This "ideal" representation has a minimal set of core, pre-defined fields based on the [WHO Data Set](http://www.who.int/ictrp/network/trds/en/), and a less structured set of associated data making up the graph of everything the OpenTrials platform knows on a given trial. 
 
--   The "ideal" representation of a trial will be based on the [WHO Data Set](http://www.who.int/ictrp/network/trds/en/) plus additional fields that cannot be mapped consistently or reliably from the set of trial records we collect.
--   The entities on the left represent the **dimensions** of the data, providing attributes on which to explore and slice the whole OpenTrials database.
--   The entities on the right represent the **facts** of the data, providing attributes that make up everything we know about clinical trials.
+- (left) A range of data sources with information about trials.
+- (middle) Our "ideal" representation of a trial, which is made from the core facts we can extract from the various data sources.
+- (right) Key information that will be extracted from trials and used for data exploration (Examples: Find all trials conducted in Location X; Filter trials by Organization Y).
+
+### Technology stack
+
+OpenTrials will be written in Javascript and Python, being the core languages used at Open Knowledge International, and the most common languages used in the open data sector. 
+
+The majority of web-facing code will be in Javascript, using Node.js for servers, and either React or Angular for clients. The OpenTrials API will be a Node.js server implementing an [OpenAPI-compatible](https://openapis.org/) HTTP API exposing data in JSON.
+
+Significant portions of the platform are not web facing, and are concerned with data acquisition and processing. The majority of this code will be in Python, leveraging the extensive ecosystem of data processing tooling it offers.
+
+For databases, OpenTrials will use [Elasticsearch](https://www.elastic.co/products/elasticsearch) and [PostgreSQL](http://www.postgresql.org). Both of these solutions have been chosen based on previous experience, and the flexibility that each offering brings to data storage (Elasticsearch is much more than "just" a search backend, and PostgreSQL is much more than "just" an SQL backend).
+
+### 3rd party integrations
+
+We are working towards a number of 3rd party integrations for OpenTrials, and we expect these type of integrations to increase over 2016. Some of the first integrations include:
+
+* **Document Cloud**: OCR and text editing for scanned documents already in OpenTrials
+* **ContentMine** ([link](http://contentmine.org/)): Matching academic journal publications to clinical trials
+* **Epistemonikos** ([link](http://www.epistemonikos.org)): Summaries and systematic reviews on clinical trials 
 
 ## Glossary
 
