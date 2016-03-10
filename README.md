@@ -1,5 +1,7 @@
 # OpenTrials Meta
 
+[![Gitter](https://img.shields.io/gitter/room/opentrials/chat.svg)](https://gitter.im/opentrials/chat)
+
 Documents and notes for OpenTrials technical work.
 
 ## What's here
