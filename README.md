@@ -1,9 +1,15 @@
 # OpenTrials Documentation
 
 [![Gitter](https://img.shields.io/gitter/room/opentrials/chat.svg)](https://gitter.im/opentrials/chat)
+[![Issues](https://img.shields.io/badge/issue-tracker-orange.svg)](https://github.com/opentrials/opentrials/issues)
 
-Documents and notes for OpenTrials technical work.
+This repository holds the documentation for OpenTrials. The documentation is online [here](http://docs.opentrials.net), and has three distinct streams targeting different users of the OpenTrials technical platform:
 
-## What's here
+- [Documentation for developers](http://docs.opentrials.net/en/latest/developers/)
+- [Documentation for data contributors](http://docs.opentrials.net/en/latest/contributors/)
+- [Documentation for end users](http://docs.opentrials.net/en/latest/users/)
 
-* [Roadmap](roadmap.md): The working roadmap for OpenTrials development. This is a living document!
+There are also living documents for the technical roadmap and user stories:
+
+- [Technical Roadmap](http://docs.opentrials.net/en/latest/extras/roadmap/)
+- [User stories](http://docs.opentrials.net/en/latest/extras/user-stories/)

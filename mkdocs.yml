@@ -1,0 +1,22 @@
+site_name: OpenTrials
+site_description: OpenTrials is a database for the clinical trial data.
+site_url: http://docs.opentrials.net
+repo_url: https://github.com/opentrials/opentrials
+pages:
+- Home:
+  - Start: index.md
+- Developers:
+  - 'Getting started': developers/index.md
+  - Design: developers/design.md
+- Contributors:
+  - 'Getting started': contributors/index.md
+- Users:
+  - 'Getting started': users/index.md
+  - Explore: users/explore.md
+  - Interact: users/interact.md
+  - Export: users/export.md
+- Extras:
+  - 'Technical roadmap': extras/roadmap/index.md
+  - 'User stories': extras/user-stories/index.md
+theme: readthedocs
+
