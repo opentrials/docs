@@ -16,7 +16,7 @@ A set of user stories to inform platform development.
 
 ### Public UIs
 
-#### Exploring the database
+#### A. Exploring the database
 
 1. As a *Visiting User*, I want to be able to use a simple search interface, so I can explore and discover the OpenTrials database.
 2. As a *Visiting User*, I want to be able to use an advanced search form that allows me to target search based on key attributes and relational data on trials, so I can explore and discover the OpenTrials database with more accuracy.
@@ -44,7 +44,7 @@ A set of user stories to inform platform development.
   - Report on top # institutes associated with conducting trials
   - Report on institute with most complete but unpublished trials
 
-#### Contributing and curating data
+#### B. Contributing and curating data
 
 1. As *Product Owner*, I want visitors to be able to authenticate with OpenTrials via an OAuth provider, so that the platform can offer features based on user accounts.
 2. As a *Product Owner*, I want user accounts to have basic permission levels implemented via *roles*, so that certain users can be authorized to perform certain actions.
@@ -63,9 +63,13 @@ A set of user stories to inform platform development.
 
 ### Public APIs
 
+#### C. API usage
+
 1. As an *App Administrator*, I want API consumers to use API keys, so I can study and measure API usage patterns.
 
 ### Data Warehouse
+
+#### D. Data storage and processing
 
 1. As a *Product Owner*, I want a storage solution for data from a range of publicly accessible clinical trial registers, so the database can be built on this initial set of data about trials.
 2. As an *Product Owner*, I want a storage solution for existing meta data on papers published in academic journals, so linkages from this data to the trial meta data in storage can be made.
