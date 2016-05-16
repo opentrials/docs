@@ -14,6 +14,6 @@ A set of user stories to inform platform development.
 
 ## User Stories
 
-User stories are manged on a trello board. <a href="https://trello.com/b/sFPqqT9W/open-trials-user-stories">Click through to the board</a>, or click through on a spaecific card below.
+User stories are manged on a trello board. <a href="https://trello.com/b/sFPqqT9W/open-trials-user-stories">Click through to the board</a>, or click through on a specific card below.
 
 <iframe frameBorder="0" margin="0" padding="0" width="100%" height="1280px" src="https://trello.com/b/sFPqqT9W.html"></iframe>
