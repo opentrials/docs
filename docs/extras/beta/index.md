@@ -24,7 +24,7 @@ What those diagrams do not reveal is the actual feature set exposed to users, so
 
 The API is currently at **v1**. The base endpoint for the API is [here](http://api.opentrials.net/v1/), and interactive documentation for the API can be found [here](http://api.opentrials.net/v1/docs/).
 
-The API exposes several RESTful endpoints that allow querying the primary entities of the OpenTrials data model. This is particularly useful for creating applications that pagination through related data, or where the application has identifiers for particular objects and wants to query all information for those objects.
+The API exposes several RESTful endpoints that allow querying the primary entities of the OpenTrials data model. This is particularly useful for creating applications that paginate through related data, or where the application has identifiers for particular objects and wants to query all information for those objects.
 
 The API also exposes a search endpoint, which is backed by Elasticsearch. This allows for deep queries into the entire database, and does not necessarily require any knowledge of the data model, or the relations between entities, to yield useful results. We've found that, given the nature of the data itself, the search endpoint is the most useful endpoint for regular use.
 
@@ -32,7 +32,7 @@ Our API implements the [Open APIs specification](https://openapis.org). One of t
 
 ### Explorer UI
 
-The [Explorer UI](https://explorer.opentrials.net) is the main portal into the OpenTrials data. It is based on a search-driven user experience, and once a user reach a trial page, further navigation into the related entities for that trial.
+The [Explorer UI](https://explorer.opentrials.net) is the main portal into the OpenTrials data. It is based on a search-driven user experience, and once a user reaches a trial page, opens up further navigation into the related entities for that trial.
 
 The explorer easily enables users to navigate back to the data sources used to populate the database, and notably features many prompts for user contributions to help enhance the database by either identifying errors or contributing new data.
 
