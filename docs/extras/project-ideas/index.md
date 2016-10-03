@@ -6,7 +6,7 @@ This means that not only are there many ways to contribute to the core platform 
 
 See the [Technical Roadmap](http://docs.opentrials.net/en/latest/extras/roadmap/) for some more specific details on the platform, what has been built, and what is in our pipeline.
 
-Here, we'll discuss some specific project ideas that could be taken up at a hackthon, for a weekend project, or even for a longer period as a contribution to the OpenTrials ecosystem.
+Here, we'll discuss some specific project ideas that could be taken up at a hack day, for a weekend project, or even for a longer period as a contribution to the OpenTrials ecosystem.
 
 ## Ideas
 
@@ -14,13 +14,13 @@ Here, we'll discuss some specific project ideas that could be taken up at a hack
 
 #### What
 
-The OpenTrials data warehouse collects data from various sources, and as part of the cleaning process, does an initial extraction of various entities in the data. One such entity is "organisations". Our table that holds organisation (companies, research centres, universities and so on) data that has been extracting from the clinical trial meta data in the OpenTrials database.
+The OpenTrials data warehouse collects data from various sources, and as part of the cleaning process, does an initial extraction of various entities in the data. One such entity is "organisations". Our table holds organisation data (companies, research centres, universities etc) that has been extracted from the clinical trial metadata in the OpenTrials database.
 
 This data in and of itself is interesting, presenting a view into which organisations are funding and conducting clinical trials. In order to make this data more effective, it needs to be cleaned up and normalised.
 
 #### How
 
-Use [OpenCorporates](https://opencorporates.com) to get canonical information on companies, or perhaps look for other sources that are specifically targeted to [Pharmaceutical companies](https://en.wikipedia.org/wiki/List_of_pharmaceutical_companies) or [universities](https://en.wikipedia.org/wiki/Category:Medical_research_institutes_in_the_United_States). Use such sources as a clean lookup table, and identify matches between these and data in the Open Trials database.
+Use [OpenCorporates](https://opencorporates.com) to get canonical information on companies, or perhaps look for other sources that are specifically targeted to [Pharmaceutical companies](https://en.wikipedia.org/wiki/List_of_pharmaceutical_companies) or [universities](https://en.wikipedia.org/wiki/Category:Medical_research_institutes_in_the_United_States). Use such sources as a clean lookup table, and identify matches between these and data in the OpenTrials database.
 
 Use fuzzy matching on names, or other techniques. Create a [processor](https://github.com/opentrials/processors) that encapsulates your normalisation routines and submit a [pull request](https://github.com/opentrials/processors/pulls) for peer review.
 
@@ -40,7 +40,7 @@ As with the above idea on organisation data, similar opportunities exist for nor
 
 As lookup tables for persons are harder to come by than for organisations, the suggested approach would be to do fuzzy matching across the names as a first step to creating a normalised dataset.
 
-Beyond this important step, one could then use the cleaned list of names against a generic search engine, and look for matches with a high degree of alignment to the medical domain, and start to extract additional data on these persons, such as academic publications, association with research departments and so on.
+Beyond this important step, one could then use the cleaned list of names against a generic search engine, and look for matches with a high degree of alignment to the medical domain, and start to extract additional data on these persons, such as academic publications, association with research departments etc. Additionally, for trials with [linked publications](http://explorer.opentrials.net/search?q=&has_publications=true), names matches could be looked up against the list of authors for publications known to relate to the trial (NB. multiple publications may relate to a particular trial).
 
 Building such a body of knowledge, this could then be triangulated with the rest of the OpenTrials database, identifying new academic publications related to trials, for example.
 
@@ -53,13 +53,13 @@ Building such a body of knowledge, this could then be triangulated with the rest
 
 #### What
 
-In OpenTrials, we have [collectors](https://github.com/opentrials/collectors), which modules and functions of Python code to get data from some external source into the OpenTrials warehouse database for further processing.
+In OpenTrials, we have [collectors](https://github.com/opentrials/collectors), which use modules and functions of Python code to get data from some external source into the OpenTrials warehouse database for further processing.
 
 There are many data sources available. So far we've build out the spine of the database with core clinical trial records, but there are tens of additional sources that can potentially be matched onto the clinical trials we know about, and provide value to the database.
 
 #### How
 
-See the [documentation](https://github.com/opentrials/collectors/tree/master/docs/collectors) for all existing collectors, and start your own with a new data source!
+See the [documentation](https://github.com/opentrials/collectors/tree/master/docs/collectors) for all existing collectors, and start your own with a new data source! A good place to begin would be to see if any collectors have not yet been written for the 16 [WHO Primary Registries](http://www.who.int/ictrp/network/primary/en/).
 
 #### Skills
 
@@ -103,13 +103,13 @@ Using the [OpenTrials query interface](https://query.opentrials.net/), build a s
 
 #### What
 
-By collecting a significant amount of publicly available data on clinical trials, we've found that different records for the same trial often have different information. Such differences can be, for example, in the supposed number of participants who took part in a trial, through to whether or not the trial has had results published.
+By collecting a significant amount of publicly available data on clinical trials, we've found that different records for the same trial often have different information. Such differences can be, for example, in the supposed number of participants who took part in a trial, whether the trial is still ongoing, or if the trial's results have been published.
 
-These discrepancies are important as all these public sources of trial data can be taken as "official", and referenced in academic literature, for example. Therefore, exposing information on discrepancies is an important outcome of building the OpenTrials database.
+These discrepancies are important as all these public sources of trial data can be taken as "official", and referenced in the academic literature, for example. Therefore, exposing information on discrepancies is an important outcome of building the OpenTrials database.
 
 #### How
 
-Use the [OpenTrials API](http://api.opentrials.net/v1/docs/) to find trials with detected discrepancies. Look for common types of discrepancies, and build basic visualisations based on type (e.g.: the publication date or participation count) or frequency (e.g.: are discrepancies becoming more common or less common?).
+Use the [OpenTrials API](http://api.opentrials.net/v1/docs/) to find trials with detected discrepancies. Look for common types of discrepancies, and build basic visualisations based on type (e.g.: the publication date or participation count) or frequency (e.g. are discrepancies becoming more common or less common?).
 
 #### Skills
 
@@ -120,11 +120,11 @@ Use the [OpenTrials API](http://api.opentrials.net/v1/docs/) to find trials with
 
 #### What
 
-It is imperative that results of clinical trials are published. This is how knowledge is shared: about the effectiveness, or not, of a particular intervention for a particular condition, for example. Unfortunately, many trials have there results published with a long delay, or, simply do not have their results published at all.
+It is imperative that results of clinical trials are published. This is how knowledge is shared: about the effectiveness, or not, of a particular intervention for a particular condition, for example. Unfortunately, many trials have their results published with a long delay, or, simply do not have their results published at all.
 
 #### How
 
-Use the [OpenTrials API](http://api.opentrials.net/v1/docs/) to find trials with a large lag in publication of results, or, trials that have finished and have not yet published results. Build basic visualisations that show lag over time, or lag by condition, and so on.
+Use the [OpenTrials API](http://api.opentrials.net/v1/docs/) to find trials with a large lag in publication of results, or, trials that have finished and have not yet published results. Build basic visualisations that show lag over time, or lag by condition, by treatment, by trial sponsor, by primary investigator and so on.
 
 #### Skills
 
@@ -150,7 +150,7 @@ Use the [OpenTrials API](http://api.opentrials.net/v1/docs/) to find trials info
 
 #### What
 
-The main user interface for OpenTrials is the [Explorer](https://explorer.opentrials.net). It presents a simple, search-based UI for discovering what is in the OpenTrials database. Explorer alternate ways of displaying information, or, for submitting information to OpenTrials.
+The main user interface for OpenTrials is the [Explorer](https://explorer.opentrials.net). It presents a simple, search-based UI for discovering what is in the OpenTrials database. Experiment with alternate ways of displaying information, or, for submitting information to OpenTrials.
 
 #### How
 
@@ -163,8 +163,8 @@ With whatever web design tools you are fluent in!
 
 ### Some general solutions of use to domain experts
 
-- For all trials registered in two or more places, show the prespecified primary and secondary outcomes, so that discrepancies can be found
-- Search for all trials in a given geographical area, that are recruiting participants for a given age and gender.
+- For all trials registered in two or more places, show the prespecified primary and secondary outcomes (side by side?), so that discrepancies can be found
+- Search for all trials in a given geographical area, that are recruiting participants for a given condition, age, and gender (e.g. cancer trials in London for men aged 18-30).
 
 ## Resources
 
