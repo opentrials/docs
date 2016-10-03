@@ -14,4 +14,5 @@ There are also living documents for the technical roadmap and user stories:
 
 - [Technical Roadmap](http://docs.opentrials.net/en/latest/extras/roadmap/)
 - [User stories](http://docs.opentrials.net/en/latest/extras/user-stories/)
+- [Introduction to the data](http://docs.opentrials.net/en/latest/extras/data-sources/)
 - [Project ideas](http://docs.opentrials.net/en/latest/extras/project-ideas/)
