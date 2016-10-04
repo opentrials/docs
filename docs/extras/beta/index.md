@@ -76,4 +76,4 @@ We'll also integrate a few more data sources. These are sources we've been worki
 
 ## Contributing
 
-As with all Open Knowledge International projects, we welcome and encourage contribution. For the technical work on OpenTrials, contributions can mean any or all of code, documentation, testing, etc. See [OpenTrials on GitHub](https://github.com/opentrials) for all the repositories with interesting tasks to take up. Also, you can contact [opentrials@okfn.org](mailto:opentrials@okfn.org) if you would like to contribute!
+As with all Open Knowledge International projects, we welcome and encourage contribution. For the technical work on OpenTrials, contributions can mean any or all of code, documentation, testing, etc. See [OpenTrials on GitHub](https://github.com/opentrials) for all the repositories with interesting tasks to take up. You can also see all the different ways you can contribute [here](http://opentrials.net/contribute) or email us on: [opentrials@okfn.org](mailto:opentrials@okfn.org).
