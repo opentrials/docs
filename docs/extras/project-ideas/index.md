@@ -59,7 +59,7 @@ There are many data sources available. So far we've build out the spine of the d
 
 #### How
 
-See the [documentation](https://github.com/opentrials/collectors/tree/master/docs/collectors) for all existing collectors, and start your own with a new data source! A good place to begin would be to see if any collectors have not yet been written for the 16 [WHO Primary Registries](http://www.who.int/ictrp/network/primary/en/).
+See the [documentation for all existing collectors](https://github.com/opentrials/collectors/tree/master/docs/collectors) and start your own with a new data source! A good place to begin would be to see if any collectors have not yet been written for the 16 [WHO Primary Registries](http://www.who.int/ictrp/network/primary/en/).
 
 #### Skills
 
