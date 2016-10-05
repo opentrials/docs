@@ -25,7 +25,7 @@ OpenTrials aims to provide a comprehensive picture of the data and documents on 
 
 Let's start with a look at the general architecture of the OpenTrials platform. This is a high-level overview, describing the general data flow, and the relation between different components.
 
-<img src="images/architecture.png" width="600" style="text-align: center; display: block; margin: 0 auto;" title="OpenTrials Architecture Overview">
+<img src="/en/latest/assets/images/architecture.png" width="600" style="text-align: center; display: block; margin: 0 auto;" title="OpenTrials Architecture Overview">
 
 OpenTrials will be implemented as a set of loosely coupled components, from data acquisition through to user-facing applications:
 
@@ -39,7 +39,7 @@ Of course, there are many details inside each component as described in the abov
 
 It is important to note that we are not setting out to design a perfectly formed vocabulary around trial data. When we talk about linking trial data, we do not mean that source data will be required to conform to any pre-conceived notion of what that data *should* look like. Rather, we accept that the data itself is messy, inconsistent, divergent and non-standard, and we set out to increase the value of this data by *threading* it together based on a range of matching techniques, and by extracting a set of relations between various entities that are manifest in the data itself.
 
-<img src="images/model.png" width="600" style="text-align: center; display: block; margin: 0 auto;" title="OpenTrials Data Model Overview">
+<img src="/en/latest/assets/images/model.png" width="600" style="text-align: center; display: block; margin: 0 auto;" title="OpenTrials Data Model Overview">
 
 The above diagram centers around our "ideal" representation of a trial, which is derived from various sources of data on a trial, starting with the trial records published on clinical trial registers. This "ideal" representation has a minimal set of core, pre-defined fields based on the [WHO Data Set](http://www.who.int/ictrp/network/trds/en/), and a less structured set of associated data making up the graph of everything the OpenTrials platform knows on a given trial. 
 

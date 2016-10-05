@@ -14,9 +14,11 @@ OpenTrials is designed as a modular platform, employing a set of loosely coupled
 
 In the [announcement post](http://opentrials.net/2016/02/10/opentrials-technical-roadmap/) for the platform, we presented two diagrams that describe the architecture of the platform, and the data model that OpenTrials employs. The design presented then has not significantly changed, and you can see those diagrams below for convenience.
 
-<img src="images/architecture.png" width="600" style="text-align: center; display: block; margin: 0 auto;" title="OpenTrials Architecture Overview">
+<img src="/en/latest/assets/images/architecture.png" width="600" style="text-align: center; display: block; margin: 0 auto;" title="OpenTrials Architecture Overview">
 
-<img src="images/model.png" width="600" style="text-align: center; display: block; margin: 0 auto;" title="OpenTrials Data Model Overview">
+<p></p>
+
+<img src="/en/latest/assets/images/model.png" width="600" style="text-align: center; display: block; margin: 0 auto;" title="OpenTrials Data Model Overview">
 
 What those diagrams do not reveal is the actual feature set exposed to users, so we'll highlight the major features here.
 
