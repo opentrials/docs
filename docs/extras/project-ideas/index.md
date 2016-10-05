@@ -14,7 +14,7 @@ Here, we'll discuss some specific project ideas that could be taken up at a hack
 
 #### What
 
-The OpenTrials data warehouse collects data from various sources, and as part of the cleaning process, does an initial extraction of various entities in the data. One such entity is "organisations". Our table holds organisation data (companies, research centres, universities etc) that has been extracted from the clinical trial metadata in the OpenTrials database.
+The OpenTrials data warehouse collects data from various sources, and as part of the cleaning process, does an initial extraction of various entities in the data. One such entity is "organisations". Our table that holds organisation (companies, research centres, universities and so on) data that has been extracting from the clinical trial meta data in the OpenTrials database.
 
 This data in and of itself is interesting, presenting a view into which organisations are funding and conducting clinical trials. In order to make this data more effective, it needs to be cleaned up and normalised.
 
@@ -116,6 +116,21 @@ Use the [OpenTrials API](http://api.opentrials.net/v1/docs/) to find trials with
 - Intermediate JavaScript and HTML
 - Basic knowledge of visualisations
 
+### Visualise publication lag
+
+#### What
+
+It is imperative that results of clinical trials are published. This is how knowledge is shared: about the effectiveness, or not, of a particular intervention for a particular condition, for example. Unfortunately, many trials have there results published with a long delay, or, simply do not have their results published at all.
+
+#### How
+
+Use the [OpenTrials API](http://api.opentrials.net/v1/docs/) to find trials with a large lag in publication of results, or, trials that have finished and have not yet published results. Build basic visualisations that show lag over time, or lag by condition, and so on.
+
+#### Skills
+
+- Intermediate JavaScript and HTML
+- Basic knowledge of visualisations
+
 ### Visualise the relationship between conditions and unpublished/published/ongoing trials
 
 #### What
@@ -135,7 +150,7 @@ Use the [OpenTrials API](http://api.opentrials.net/v1/docs/) to find trials info
 
 #### What
 
-The main user interface for OpenTrials is the [Explorer](https://explorer.opentrials.net). It presents a simple, search-based UI for discovering what is in the OpenTrials database. Experiment with alternate ways of displaying information, or, for submitting information to OpenTrials.
+The main user interface for OpenTrials is the [Explorer](https://explorer.opentrials.net). It presents a simple, search-based UI for discovering what is in the OpenTrials database. Explorer alternate ways of displaying information, or, for submitting information to OpenTrials.
 
 #### How
 
