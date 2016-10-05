@@ -8,7 +8,11 @@ Welcome to the OpenTrials documentation. Choose the appropriate section and dive
 - [OpenTrials for contributors](contributors/): Do you want to add your data to OpenTrials? Start here.
 - [OpenTrials for users](users/): Do you want to use OpenTrials data? Start here.
 - [Technical Roadmap](extras/roadmap/)
+- [Beta announcement](extras/beta/)
 - [User stories](extras/user-stories/)
+- [Introduction to the data](extras/data-sources/)
+- [Project ideas](extras/project-ideas/)
+
 
 ## Links
 

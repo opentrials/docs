@@ -18,5 +18,9 @@ pages:
 - Extras:
   - 'Technical roadmap': extras/roadmap/index.md
   - 'User stories': extras/user-stories/index.md
+  - 'Beta announcement': extras/beta/index.md
+  - 'Introduction to the data': extras/data-sources/index.md
+  - 'Project ideas': extras/project-ideas/index.md
+ - 'Introduction to the data': extras/data-sources/index.md
 theme: readthedocs
 
