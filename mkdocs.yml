@@ -21,6 +21,5 @@ pages:
   - 'Beta announcement': extras/beta/index.md
   - 'Introduction to the data': extras/data-sources/index.md
   - 'Project ideas': extras/project-ideas/index.md
-  - 'Introduction to the data': extras/data-sources/index.md
 theme: readthedocs
 
