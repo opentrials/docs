@@ -4,7 +4,7 @@ OpenTrials is really a platform on which other things can be built, and has been
 
 This means that not only are there many ways to contribute to the core platform development, but also it is invited and encouraged to leverage the code and data for custom projects!
 
-See the [Technical Roadmap](http://docs.opentrials.net/en/latest/extras/roadmap/) for some more specific details on the platform, what has been built, and what is in our pipeline.
+See the [Technical Roadmap](http://docs.opentrials.net/en/latest/extras/roadmap/) and the [beta announcement](http://docs.opentrials.net/en/latest/extras/beta/)for some more specific details on the platform, what has been built, and what is in our pipeline.
 
 Here, we'll discuss some specific project ideas that could be taken up at a hack day, for a weekend project, or even for a longer period as a contribution to the OpenTrials ecosystem.
 
@@ -59,7 +59,7 @@ There are many data sources available. So far we've build out the spine of the d
 
 #### How
 
-See the [documentation for all existing collectors](https://github.com/opentrials/collectors/tree/master/docs/collectors) and start your own with a new data source! A good place to begin would be to see if any collectors have not yet been written for the 16 [WHO Primary Registries](http://www.who.int/ictrp/network/primary/en/).
+See the [documentation for all existing collectors](https://github.com/opentrials/collectors/tree/master/docs/collectors) and start your own with a new data source! A good place to begin would be to see if any collectors have not yet been written for the 15 [WHO Primary Registries](http://www.who.int/ictrp/network/primary/en/).
 
 #### Skills
 
@@ -116,21 +116,6 @@ Use the [OpenTrials API](http://api.opentrials.net/v1/docs/) to find trials with
 - Intermediate JavaScript and HTML
 - Basic knowledge of visualisations
 
-### Visualise publication lag
-
-#### What
-
-It is imperative that results of clinical trials are published. This is how knowledge is shared: about the effectiveness, or not, of a particular intervention for a particular condition, for example. Unfortunately, many trials have their results published with a long delay, or, simply do not have their results published at all.
-
-#### How
-
-Use the [OpenTrials API](http://api.opentrials.net/v1/docs/) to find trials with a large lag in publication of results, or, trials that have finished and have not yet published results. Build basic visualisations that show lag over time, or lag by condition, by treatment, by trial sponsor, by primary investigator and so on.
-
-#### Skills
-
-- Intermediate JavaScript and HTML
-- Basic knowledge of visualisations
-
 ### Visualise the relationship between conditions and unpublished/published/ongoing trials
 
 #### What
@@ -139,7 +124,7 @@ Certain conditions can be subject to clinical trials at different frequencies ov
 
 #### How
 
-Use the [OpenTrials API](http://api.opentrials.net/v1/docs/) to find trials information on start and end dates for trials related to certain conditions.
+Use the [OpenTrials API](http://api.opentrials.net/v1/docs/) to find trials information on trials related to certain conditions.
 
 #### Skills
 
@@ -164,7 +149,7 @@ With whatever web design tools you are fluent in!
 ### Some general solutions of use to domain experts
 
 - For all trials registered in two or more places, show the prespecified primary and secondary outcomes (side by side?), so that discrepancies can be found
-- Search for all trials in a given geographical area, that are recruiting participants for a given condition, age, and gender (e.g. cancer trials in London for men aged 18-30).
+- Search for all trials in a given geographical area, that are recruiting participants for a given condition, age, and gender (e.g. cancer trials in London for men).
 
 ## Resources
 
