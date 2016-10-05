@@ -22,7 +22,9 @@ We take data from the FDA in two different "collectors".
 
 First, we use an FDA API to extract information on drug names. This data is used to help normalise our "interventions" data.
 
-Second, we [scrape Drug Approval Packages](http://opentrials.net/2016/08/10/opentrialsfda-unlocking-the-trove-of-clinical-trial-data-in-drugsfda/) (DAP) data from the FDA. Unfortunately, there is no API for this data, and DAP data tends to be in unsearchable, scanned PDF files. However, they are a very high quality source of information on clinical trials, containing detailed information on the methods and results of trials, and required as part of a drug's marketing authorisation (i.e. for a company to get permission to sell the drug, assuming it meets certain standards). Typically the information contained in DAPs is less biased than results of clinical trials which are published in academic journals, so are of interest to OpenTrials and its users.
+Second, we [scrape Drug Approval Packages](http://opentrials.net/2016/08/10/opentrialsfda-unlocking-the-trove-of-clinical-trial-data-in-drugsfda/) (DAP) data from the FDA. Unfortunately, there is no API for this data, and DAP data tends to be in unsearchable, scanned PDF files. However, they are a very high quality source of information on clinical trials, containing detailed information on the methods and results of trials, and required as part of a drug's marketing authorisation (i.e. for a company to get permission to sell the drug, assuming it meets certain standards). 
+
+Typically the information contained in DAPs is less biased than results of clinical trials which are published in academic journals, so are of interest to OpenTrials and its users. For an interesting analysis of this issue, see this paper by [Erick Turner](http://www.nejm.org/doi/full/10.1056/NEJMsa065779).
 
 ## HRA
 
