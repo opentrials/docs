@@ -8,7 +8,7 @@ Here, we'll give a brief rundown of the data available in OpenTrials, and why it
 
 Data from clinical trial registries forms the core of the OpenTrials database. These registries have metadata about trials, providing, for example, information on the condition(s) being targeted, the intervention(s) being tested, the number and gender of participants, and so on. We pull in this metadata, look for matches across the registers (multiple "records" talking about the same trial), and build an initial thread of public information about trials from these registriess.
 
-One of the primary registers is [ClinicalTrials.gov](https://clinicaltrials.gov). Have a look around there for an understanding of type of information that we get from registries.
+One of the primary registers is [ClinicalTrials.gov](https://clinicaltrials.gov). Have a look around there for an understanding of the type of information that we get from registries.
 
 ## Pubmed
 
