@@ -7,7 +7,8 @@ pages:
   - Start: index.md
 - Developers:
   - 'Getting started': developers/index.md
-  - Design: developers/design.md
+  - Data Model: developers/data-model.md
+  - API: developers/api.md
 - Contributors:
   - 'Getting started': contributors/index.md
 - Users:
