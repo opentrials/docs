@@ -33,8 +33,7 @@ and type for each field.
 Just follow the route of the model you're interested in, expand it and press `Model`
 next to `Example Value` (where the cursor points in the image below):
 
-<img src="/docs/assets/images/trial_model_swagger.png" style="text-align: center;
-display: block; margin: 0 auto;" title="Trial model description in Swagger">
+![Trial model description in Swagger](https://github.com/opentrials/docs/blob/master/docs/assets/images/trial_model_swagger.png?raw=true)
 
 What each table/entity represents:
 

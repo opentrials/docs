@@ -9,6 +9,7 @@ OpenTrials API manages the schema of our API `database` and search indexes. It a
 exposes the data using RESTful endpoints.
 
 Resources:
+
 - an up-to-date documentation of the API endpoints is available [here](https://api.opentrials.net/v1/docs/).
 - more information on the schema of the API `database` in [this section](data-model.md).
 - more techical details (stack, how to set up) [here](https://github.com/opentrials/api/blob/master/README.md)
@@ -154,6 +155,7 @@ Here is a list of the attributes included in the `FDADocuments` index:
     ```
     GET /v1/search?q=gender:female
     ```
+
 * Navigate to the next page
 
     ```
@@ -175,6 +177,7 @@ Here is a list of the attributes included in the `FDADocuments` index:
     ```
     GET /v1/search?q=condition:breast cancer
     ```
+
 * Identifiers attribute
 
     The `identifiers` field is an `object` with names of identifiers as attributes (e.g. `nct`).
@@ -191,6 +194,7 @@ Here is a list of the attributes included in the `FDADocuments` index:
     ```
     GET /v1/search?q=registration_date:2016-09-26
     ```
+
 * Range queries
 
     To get all the `trials` registered between 26 September 2016 and 20 October 2016:
@@ -198,6 +202,7 @@ Here is a list of the attributes included in the `FDADocuments` index:
     ```
     GET /v1/search?q=registration_date:[2016-09-26 TO 2016-10-11]
     ```
+
 * Multiple attributes
 
     To get all `trials` directed at women that are ongoing:
