@@ -11,7 +11,7 @@ Here you can learn about the design of the platform, how to use it and the proce
 
 OpenTrials project has 4 main components:
   - [Collectors](https://github.com/opentrials/collectors): contains logic for
-gathering data (ex: scrapers) and manages the schema for our `warehouse` database
+gathering data (e.g. scrapers) and manages the schema for our `warehouse` database
 that keeps the data collected from different sources
   - [Processors](https://github.com/opentrials/processors): contains logic for
 normalizing and enriching data in our `warehouse` and API `database` and manages our file storage

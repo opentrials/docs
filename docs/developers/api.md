@@ -6,7 +6,7 @@
 ## Overview
 
 OpenTrials API manages the schema of our API `database` and search indexes. It also 
-exposes the data in RESTful enpoints.
+exposes the data using RESTful endpoints.
 
 Resources:
 - an up-to-date documentation of the API endpoints is available [here](https://api.opentrials.net/v1/docs/).
@@ -15,19 +15,19 @@ Resources:
 
 ## Search
 
-Our search is powered by [ElasticSearch](https://www.elastic.co/guide/en/elasticsearch/reference/2.0/).
+Our search is powered by [ElasticSearch](https://www.elastic.co/guide/en/elasticsearch/reference/2.3/index.html).
 
 The general format of a `/search` request is:
 
 ```
-/v1/search?q=your_query_here
+GET /v1/search?q=your_query_here
 ```
 
 You can pass as value to the `q` parameter any query on indexed attributes that complies with the
-[ElasticSearch Query String syntax](https://www.elastic.co/guide/en/elasticsearch/reference/2.0/query-dsl-query-string-query.html).
+[ElasticSearch Query String syntax](https://www.elastic.co/guide/en/elasticsearch/reference/2.3/query-dsl-query-string-query.html).
 To see the available attributes for each index check the lists below.
 
-A `GET` request on `/search` routes without `q` parameter will return all results.
+A request on `/search` routes without the `q` parameter will return all results.
 
 Search results are paginated but you can customize the number of results per page.
 
@@ -152,19 +152,19 @@ Here is a list of the attributes included in the `FDADocuments` index:
 
     To get all the `trials` directed at women:
     ```
-    /v1/search?q=gender:female
+    GET /v1/search?q=gender:female
     ```
 * Navigate to the next page
 
     ```
-    /v1/search?q=gender:female&page=2
+    GET /v1/search?q=gender:female&page=2
     ```
 
 * Nested attribute query
 
     To get all the `trials` that research breast cancer:
     ```
-    /v1/search?q=conditions.name:breast cancer
+    GET /v1/search?q=conditions.name:breast cancer
     ```
     Notice that we use `conditions.name` to reference the `name` attribute of `conditions`.
     The same syntax applies for any level of nesting in attributes of type `object`.
@@ -173,15 +173,15 @@ Here is a list of the attributes included in the `FDADocuments` index:
     Therefore you can use the following query to get the same results:
 
     ```
-    /v1/search?q=condition:breast cancer
+    GET /v1/search?q=condition:breast cancer
     ```
 * Identifiers attribute
 
-    The `identifiers` attribute is just a normal `object` but its attributes are names of identifiers. 
-    To get all the `trials` (hopefully just one) with the NCT ID `NCT02887196` :
+    The `identifiers` field is an `object` with names of identifiers as attributes (e.g. `nct`).
+    To get all the `trials` with the NCT ID `NCT02887196`:
 
     ```
-    /v1/search?q=identifiers.nct:NCT02887196
+    GET /v1/search?q=identifiers.nct:NCT02887196
     ```
 
 * Date attribute query
@@ -189,35 +189,30 @@ Here is a list of the attributes included in the `FDADocuments` index:
     To get all the `trials` registered on 26 September 2016: 
     
     ```
-    /v1/search?q=registration_date:2016-09-26
+    GET /v1/search?q=registration_date:2016-09-26
     ```
 * Range queries
 
     To get all the `trials` registered between 26 September 2016 and 20 October 2016:
 
     ```
-    /v1/search?q=registration_date:[2016-09-26 TO 2016-10-11]
+    GET /v1/search?q=registration_date:[2016-09-26 TO 2016-10-11]
     ```
 * Multiple attributes
 
     To get all `trials` directed at women that are ongoing:
 
     ```
-    /v1/search?q=gender:female AND status:ongoing
+    GET /v1/search?q=gender:female AND status:ongoing
     ```
 
 * Raw text from `File` pages
 
-    To get all `FDADocuments` who's files contain the word "electronic" and it's variations e.g.`electronically`
+    To get all `FDADocuments` whose files contain the word "electronic" and its variations e.g.`electronically`
 
     ```
-    /v1/search/fda_documents?text=electronic~
+    GET /v1/search/fda_documents?text=electronic~
     ```
 
 To see the all the possibilities of query check the 
-[ElasticSearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/2.0/query-dsl-query-string-query.html).
-
-
-
-
-
+[ElasticSearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/2.3/query-dsl-query-string-query.html).

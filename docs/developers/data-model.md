@@ -15,10 +15,10 @@ into that corresponding table after very little processing (e.g. type conversion
 to comply with the structure
 of our [API](https://github.com/opentrials/api) `database`. This process involves:
     * separating the data into different entities (`trial`, `publication`, etc.)
-    * extracting relevant information from unstructured text (through parsing or
+    * extracting relevant information from unstructured data (through parsing or
     optical character recognition)
     * matching with existing data based on common identifiers (e.g. NCT ID) to avoid duplication
-    * linking with related data (e.g. a `publication` with its `trial`)
+    * linking related data (e.g. a `publication` with its `trial`)
 4. Normalized data is introduced into our API `database`.
 5. Our API indexes the data to make it easily searchable.
 6. Data is ready to be searched and visualized through the API or 
@@ -74,6 +74,6 @@ This makes the first `record` the *primary* source of data for the `trial`.
 ## Warehouse database
 
 As the name suggests, the purpose of `warehouse` is to keep collected data in a very raw form.
-It's structure is very simple: we have several tables that correspond to different data
+Its structure is very simple: we have several tables that correspond to different data
 registries (e.g. `euctr`, `pubmed`). These tables are not connected to each other and they
 have a flat schema that follows the structure of data in the registries they correspond to.
