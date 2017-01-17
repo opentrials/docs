@@ -64,10 +64,9 @@ Sometimes these versions can have contradictory information.
 For example one `record` could say the `trial` was completed while another that it's ongoing.
 These contradictory pieces of information are what we call *discrepancies*.
 
-To maximize the amount and accuracy of information in `trials`, we have a system to prioritize
+To maximize the accuracy of information in `trials`, we have a system to prioritize
 from which `records` to take it. For example, if a `trial` has a `record` from a registry that verifies its
-information and a `record` from one that doesn't, we will assign to the `trial`
-all the available values from the former and complete the missing values from the latter.
+information and a `record` from a registry that doesn't, we will assign to the `trial` the values from the former.
 This makes the first `record` the *primary* source of data for the `trial`.
 
 ## Warehouse database
